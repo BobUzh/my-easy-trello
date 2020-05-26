@@ -44,7 +44,7 @@ class Service {
     getAllBoards = () => {
         const boards = this.parseLocalStore();
         let boardsCollection = [];
-        if( boards) {
+        if( boards ) {
             boardsCollection = boards.map( e => {
                 return { title:e.title, id: e.id }
             } );
