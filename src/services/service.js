@@ -1,32 +1,6 @@
 class Service {
 
-    boards = [
-        {title:'programming', id:1, notesList:[
-            {name:'books', id:1, parentName:'programming', task:[
-                {text:'OOP', id:1},
-                {text:'algorithms', id:2}
-                ]
-            },
-            {name:'practice 2', id:2, parentName:'programming', task:[
-                {text:'todo-list',id:3},
-                {text:'calculator', id:4},
-                {text:'slider',id:5},
-                {text:'photo-collage', id:6}
-                ]
-            }]
-        },
-        {title:'design', id:2, notesList:[
-            {name:'basics', id:1, parentName:'design', task:[
-                {text:'figures',id:7},
-                {text:'lines', id:8}
-                ]
-            },
-            {name:'color palette', id:2, parentName:'design', task:[
-                {text:'empty', id:9}
-                ]
-            }]
-        }
-    ]
+    boards = []
 
     initialLocalStorage(){
         localStorage.setItem( 'boards', JSON.stringify( this.boards ) );
