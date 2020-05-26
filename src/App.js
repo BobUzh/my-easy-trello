@@ -24,7 +24,7 @@ cleanLocalStorage() {
     
     return (
         <React.Fragment>
-            <Link to='/' className="waves-effect waves-light btn"
+            <Link to='/my-easy-trello/' className="waves-effect waves-light btn"
                   style={{position: 'absolute', top: 0, left: 0}}
                   onClick={ () => this.cleanLocalStorage() }>clean all
             </Link>
@@ -33,7 +33,7 @@ cleanLocalStorage() {
 
                 <Switch>
                     <Route path="/my-easy-trello/" exact component={ BoardsListContainer } />
-                    <Route path="my-easy-trello//board/:id" component={ BoardItem } />
+                    <Route path="/my-easy-trello/board/:id" component={ BoardItem } />
                     <Redirect to='/my-easy-trello/' />
                 </Switch>
             </div>
