@@ -1,8 +1,5 @@
 class Service {
-
-    boards = [
-
-    ]
+    boards = []
 
     initialLocalStorage(){
         localStorage.setItem( 'boards', JSON.stringify( this.boards ) );
