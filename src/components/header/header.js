@@ -6,7 +6,7 @@ const Header = () => {
 
         <div className="container valign-wrapper" style={{height: '20vh'}}>
             <div className="m-auto">
-                <Link to="/"><h1 style={{fontFamily: 'Modak'}}>"trello"</h1></Link>
+                <Link to="/my-easy-trello/"><h1 style={{fontFamily: 'Modak'}}>"trello"</h1></Link>
             </div>
         </div>
 
