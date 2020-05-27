@@ -22,7 +22,7 @@ class BoardItem extends Component {
         const activeBoard = boards.find((e) => e.id == match.params.id);
 
         if ( !activeBoard) {
-            this.props.history.push('/my-easy-trello/');
+            this.props.history.push('/');
         } else {
             setActiveBoard( activeBoard );
             const dataItemBoard = this.service.getDataBoard( activeBoard.title );
