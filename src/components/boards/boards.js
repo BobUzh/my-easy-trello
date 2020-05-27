@@ -14,7 +14,7 @@ const BoardsList = ( {boards} ) => {
     return boards.map( (board) => {
         return (
             <div className="col s3 mb-2" key={ board.id } >
-                <Link to={`board/${board.id}`} >
+                <Link to={`/my-easy-trello/board/${board.id}`} >
                     <div className="board teal lighten-2 valign-wrapper" >
                         <Card title={ board.title } />
                     </div>
