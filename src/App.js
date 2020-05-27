@@ -33,8 +33,8 @@ cleanLocalStorage() {
 
                 <Switch>
                     <Route path="/my-easy-trello" exact component={ BoardsListContainer } />
-                    <Route path="/my-easy-trello/board/:id" component={ BoardItem } />
-                    <Redirect to='/my-easy-trello' />
+                    <Route path="/board/:id" component={ BoardItem } />
+                    <Redirect to='/' />
                 </Switch>
             </div>
         </React.Fragment>
