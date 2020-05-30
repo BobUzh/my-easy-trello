@@ -34,7 +34,7 @@ cleanLocalStorage() {
                 <Switch>
                     <Route path="/" exact component={ BoardsListContainer } />
                     <Route path="board/:id" component={ BoardItem } />
-                    <Redirect to='/' />
+                    {/* <Redirect to='/' /> */}
                 </Switch>
             </div>
         </React.Fragment>
