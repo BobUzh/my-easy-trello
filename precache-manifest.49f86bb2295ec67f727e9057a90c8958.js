@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f3324be50212dc4c5cfb1035842d3b9b",
+    "revision": "677a7565abe72b5ae2f120839ea2f002",
     "url": "/my-easy-trello/index.html"
   },
   {
-    "revision": "79fbd2ba65f3ce3a0ab4",
+    "revision": "5188457c0e4b97b9bfbf",
     "url": "/my-easy-trello/static/css/main.e4dac078.chunk.css"
   },
   {
-    "revision": "de80114ccc4b498c70b5",
-    "url": "/my-easy-trello/static/js/2.9f4e05bc.chunk.js"
+    "revision": "b8888b1412da94603e12",
+    "url": "/my-easy-trello/static/js/2.a523a80f.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/my-easy-trello/static/js/2.9f4e05bc.chunk.js.LICENSE.txt"
+    "url": "/my-easy-trello/static/js/2.a523a80f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "79fbd2ba65f3ce3a0ab4",
-    "url": "/my-easy-trello/static/js/main.5c1d0cfe.chunk.js"
+    "revision": "5188457c0e4b97b9bfbf",
+    "url": "/my-easy-trello/static/js/main.a6ac23d1.chunk.js"
   },
   {
     "revision": "1333cb60171cdac44530",
