@@ -10,7 +10,7 @@ const Note = ({ data, addNewTask, setActiveNoteList })=> {
     const inputValue = (e) => {
 
         if (e.key == 'Enter') {
-            if ( title.trim() != '') {
+            if ( e.target.value.trim() != '') {
                 addNewTask( e.target.value, data.name, data.parentName );
                 e.target.value = '';
             }
