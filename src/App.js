@@ -24,7 +24,7 @@ cleanLocalStorage() {
     
     return (
         <React.Fragment>
-            <Link to='/my-easy-trello/' className="waves-effect waves-light btn"
+            <Link to='my-easy-trello/' className="waves-effect waves-light btn"
                   style={{position: 'absolute', top: 0, left: 0}}
                   onClick={ () => this.cleanLocalStorage() }>clean all
             </Link>
