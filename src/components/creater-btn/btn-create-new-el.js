@@ -15,7 +15,7 @@ class BtnCreateNewElement extends Component {
         return(
             <div className="valign-wrapper white" style={style}>
                 <Link to='#' className={"btn "+this.props.color}
-                        onClick={this.props.addNewEl}>
+                        onClick={this.props.showInputTitle}>
                     <i className="material-icons">add</i>{ !this.props.isAddNewEl ? this.props.title : 'cancel'}
                 </Link>
             </div>

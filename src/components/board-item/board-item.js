@@ -36,26 +36,24 @@ class BoardItem extends Component {
     }
 
     addNewList = ( title ) => {
-        this.props.addNewNote( title, this.props.activeBoard.title );
+        if ( title.trim() != '') {
+            this.props.addNewNote( title, this.props.activeBoard.title );
+        }
     }
 
 
     render() {
         const { activeBoardData, activeBoard, isAddNewEl } = this.props;
 
-        const notesList = activeBoardData.notesList
-            ? activeBoardData.notesList.map( ( note ) => {
-                return <Note  data={ note } key={ note.id }/>
-                })
-            : null
+        const notesList = activeBoardData.notesList.map( (note) => {
+            return <Note data={ note } key={ note.id } />
+        })
 
-        const inputTitle = !isAddNewEl
-            ? null
-            : ( <div className="col s12 m3">
-                <div className="collection card-panel ">
-                    <InputTitle setTitle={ this.addNewList }/>
-                </div>
-            </div> )
+        const inputTitle = ( <div className="col s12 m3">
+                                <div className="collection card-panel ">
+                                    <InputTitle setTitle={ this.addNewList }/>
+                                </div>
+                            </div> )
 
 
     return(
@@ -63,19 +61,19 @@ class BoardItem extends Component {
             <div className="row">
                 <div className="col s3 mt-2 push-s9">
                     <BtnCreateNewElement title={'new list'}
-                                         addNewEl={ this.showInputTitle }
+                                         showInputTitle={ this.showInputTitle }
                                          isAddNewEl={ isAddNewEl } />
                 </div>
                 <div className="col s9 center pull-s3" >
                     <h3 className="white py-2 grey-text text-darken-1 mt-2"
                         style={ {height: '100px',textTransform:'uppercase'} } >
-                        { activeBoard ? activeBoard.title : <Spinner /> }
+                        { activeBoard && activeBoard.title }
                     </h3>
                 </div>
             </div>
             <div className="row">
-                { notesList }
-                { inputTitle }
+                { activeBoardData.notesList && notesList }
+                { isAddNewEl && inputTitle }
             </div>
         </div>
     )

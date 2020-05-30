@@ -14,7 +14,7 @@ const BoardsList = ( {boards} ) => {
     return boards.map( (board) => {
         return (
             <div className="col s3 mb-2" key={ board.id } >
-                <Link to={`/my-easy-trello/board/${board.id}`} >
+                <Link to={`/board/${board.id}`} >
                     <div className="board teal lighten-2 valign-wrapper" >
                         <Card title={ board.title } />
                     </div>
@@ -50,13 +50,11 @@ class BoardsListContainer extends Component {
 
         const { boardsCollection, isAddNewEl } = this.props;
 
-        const inputTitle = !isAddNewEl
-            ? null
-            : ( <div className="col s3 mb-2">
-                    <div className="board valign-wrapper">
-                        <InputTitle setTitle={ this.addNewBoard } />
-                    </div>
-                </div> )
+        const inputTitle =  ( <div className="col s3 mb-2">
+                                <div className="board valign-wrapper">
+                                    <InputTitle setTitle={ this.addNewBoard } />
+                                </div>
+                            </div> )
 
 
         return (
@@ -64,11 +62,11 @@ class BoardsListContainer extends Component {
                 <div className="row">
                     <div className="col s3">
                         <BtnCreateNewElement title={ 'new board' }
-                                             addNewEl={ this.showInputTitle }
+                                             showInputTitle={ this.showInputTitle }
                                              isAddNewEl={ isAddNewEl } />
                     </div>
                     <BoardsList boards={ boardsCollection } />
-                    { inputTitle }
+                    { isAddNewEl && inputTitle }
                 </div>
             </div>
         )
